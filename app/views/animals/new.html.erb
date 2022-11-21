@@ -1,0 +1,7 @@
+ <h3>Create a new animal rent</h3>
+        <%= simple_form_for @animal do |f| %>
+          <%= f.input :name, placeholder: 'animal' %>
+           <%= f.input :category, placeholder: 'category' %>
+            <%= f.input :age, placeholder: 'age' %>
+          <%= f.submit class: 'btn btn-flat' %>
+        <% end %>

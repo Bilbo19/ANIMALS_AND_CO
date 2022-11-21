@@ -3,11 +3,9 @@
     <%= link_to "#", class: "navbar-brand" do %>
       <%= image_tag "https://cdn-icons-png.flaticon.com/512/185/185853.png?w=740&t=st=1669046745~exp=1669047345~hmac=8f32ff46a238021ed8293981509016e962984dcb4bc538d8e244029f53eadfa2" %>
     <% end %><h1>Animals & Co</h1>
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
