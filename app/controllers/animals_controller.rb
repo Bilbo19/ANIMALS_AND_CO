@@ -1,4 +1,6 @@
 class AnimalsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
+
   def index
     @animals = Animal.all
   end
@@ -15,7 +17,7 @@ class AnimalsController < ApplicationController
     @animal = Animal.new(animal_params)
     @animal.user = current_user
     if @animal.save
-      redirect_to animals_path
+     redirect_to animals_path
     else
       render :new
     end
@@ -29,6 +31,6 @@ class AnimalsController < ApplicationController
   private
 
   def animal_params
-    params.require(:animal).permit(:name, :description, :category, :age, :id)
+    params.require(:animal).permit(:name, :description, :category, :age, :id, :user_id)
   end
 end
