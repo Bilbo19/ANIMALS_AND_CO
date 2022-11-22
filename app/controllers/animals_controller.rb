@@ -6,8 +6,8 @@ class AnimalsController < ApplicationController
   end
 
   def show
-    @animal = Animal.find(params[:animal_id])
     authorize @animal
+    @animal = Animal.find(params[:id])
   end
 
   def new
@@ -21,12 +21,13 @@ class AnimalsController < ApplicationController
     if @animal.save
       redirect_to animals_path
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
     authorize @animal
   end
 
   def destroy
+    @animal = Animal.find(params[:id])
     @animal.destroy
     redirect_to animals_path
     authorize @animal
