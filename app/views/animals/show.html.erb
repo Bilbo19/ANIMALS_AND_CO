@@ -1,3 +1,8 @@
+
 <% if @animal.user == current_user %>
 <%= link_to "Delete", animal_path(@animal), data:{turbo_method: :delete, turbo_confirm:"Are you sure ?"} %>
+<% end %>
+
+<% if policy(@animal).edit? %>
+  <%= link_to "Edit this animal", edit_animals_path(@animal) %> |
 <% end %>
