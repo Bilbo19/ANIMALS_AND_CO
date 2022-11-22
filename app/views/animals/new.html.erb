@@ -5,9 +5,11 @@
       <h2 class="text-center"><strong>Add my animal</strong></h2>
 
       <%= simple_form_for @animal do |f| %>
+        <%= f.error_notification %>
         <%= f.input :name, placeholder: 'animal' %>
         <%= f.input :category, placeholder: 'category' %>
         <%= f.input :age, placeholder: 'age' %>
+        <%= f.input :description, placeholder: 'description' %>
         <%= f.submit class: 'btn btn-flat' %>
       <% end %>
 
