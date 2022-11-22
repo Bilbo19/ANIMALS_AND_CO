@@ -1,1 +1,86 @@
 // Specific CSS for your home-page
+.container{
+  grid-template-columns: 100px 50px 100px;
+  grid-template-rows: 80px auto 80px;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+.banner {
+  background-image:
+  url(https://images.photowall.com/products/48086/jungle-lake-with-wild-animals-1.jpg?h=699&q=85);
+  background-position: right center;
+  background-attachment: fixed;
+  height: 450px;
+  text-align: center;
+}
+.sample {
+  float: left;
+  height: 50px;
+  margin: 150px 35%;
+  position: relative;
+  width: 34%;
+  &.one {
+    input {
+      border-radius: 15px;
+      right: 0;
+      transition: all .3s ease-in-out;
+      width: 50%;
+      &:focus {
+        width: 100%;
+        ~ button {
+          &.btn-search {
+            background: rgb(255, 255, 255);
+            color: rgba(0, 0, 0, 0.465);
+          }
+        }
+      }
+    }
+  }
+}
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: grid;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: grid;
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
