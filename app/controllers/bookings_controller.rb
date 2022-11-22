@@ -1,8 +1,24 @@
 class BookingsController < ApplicationController
 
   def index
-    @booking = Booking.all
-    @booking = policicy_scope(Booking)
+    @bookings = policy_scope(Booking)
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+    authorize @booking
+  end
+
+  def create
+    @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.animal = Animal.find(params[:animal_id])
+    if @booking.save
+      redirect_to booking_path(@booking)
+    else
+      render :new, status: :unprocessable_entity
+    end
+    authorize @booking
   end
 
   def edit
@@ -18,5 +34,11 @@ class BookingsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date, :user_id)
   end
 end

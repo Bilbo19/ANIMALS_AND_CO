@@ -6,8 +6,9 @@ class AnimalsController < ApplicationController
   end
 
   def show
-    authorize @animal
     @animal = Animal.find(params[:id])
+    @booking = Booking.new
+    authorize @animal
   end
 
   def new
@@ -36,6 +37,6 @@ class AnimalsController < ApplicationController
   private
 
   def animal_params
-    params.require(:animal).permit(:name, :description, :category, :age, :id, :user_id)
+    params.require(:animal).permit(:name, :description, :category, :age, :prices)
   end
 end
