@@ -4,5 +4,5 @@ class Animal < ApplicationRecord
   validates :description, presence: true
   validates :category, presence: true
   validates :age, presence: true
-  validates :description, presence: true, length: { minimum: 50, maximum: 200 }
+  validates :description, presence: true
 end

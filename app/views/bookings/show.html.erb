@@ -1,0 +1,38 @@
+<div class="booking-show-container">
+  <% days = @booking.end_date.day - @booking.start_date.day %>
+  <h3>Confirmed: <%= days %> days on <%= @booking.animal.name %></h3>
+  <div class="booking-show-boxes">
+    <div class="booking-details">
+      <div class="booking-confirm-date-range">
+        <div class="booking-confirm-arrival">
+          <p>Arrival:</p>
+          <p><%= @booking.start_date.strftime("%m/%d/%Y") %></p>
+        </div>
+        <div class="booking-confirm-departure">
+          <p>Departure:</p>
+          <p><%= @booking.end_date.strftime("%m/%d/%Y") %></p>
+        </div>
+      </div>
+      <div style="margin-top: 25px; margin-bottom:25px">
+        <hr>
+      </div>
+      <div class="booking-show-description">
+        <p><%= @booking.animal.description %></p>
+      </div>
+      <div style="margin-top: 25px; margin-bottom:25px">
+        <hr>
+      </div>
+      <div class="booking-show-host-info">
+        <p>Hosted by <%= @booking.animal.user.first_name %> <%= @booking.animal.user.last_name %></p>
+      </div>
+    </div>
+    <div class="booking-costs">
+      <h4>Charges:</h4>
+      <div class="booking-total-price">
+        <p>EUR <%= @booking.animal.price %> x <%= (@booking.end_date - @booking.start_date).to_i %> days</p>
+        <% total = @booking.animal.price * (@booking.end_date - @booking.start_date).to_i %>
+        <p><b>EUR <%= total %></b></p>
+      </div>
+    </div>
+  </div>
+</div>
