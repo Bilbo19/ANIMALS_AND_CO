@@ -1,0 +1,5 @@
+<% if policy(@animal).edit? %>
+  <%= link_to "Edit this animal", edit_animals_path(@animal) %> |
+<% end %>
+
+<%= button_to "Destroy this animals", @animal, method: :delete if policy(@animal).destroy? %>
