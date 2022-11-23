@@ -2,6 +2,8 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 require 'faker'
 
+Animal.destroy_all
+User.destroy_all
 
  user1 = User.new(
   first_name: Faker::Name.first_name,
@@ -57,21 +59,12 @@ puts 'Creating 15 fake animals...'
 
 3.times do
   animal = Animal.new(
-    name: Faker::Name.first_name,
-    description: Faker::Quote.famous_last_words,
+    name:    Faker::Creature::Animal.name,
+    description:Faker::Quote.famous_last_words,
     category: "mammals",
     age: Faker::Number.within(range: 1..100),
-    user_id: user2.id
-  )
-  animal.save!
-end
-
-3.times do
-  animal = Animal.new(
-    name: Faker::Name.first_name,
-    description: Faker::Quote.famous_last_words,
-    category: "insects",
-    age: Faker::Number.within(range: 1..100),
+    price: 43,
+    address: '5 Rue Crespin du Gast, 75011 Paris',
     user_id: user1.id
   )
   animal.save!
@@ -79,10 +72,25 @@ end
 
 3.times do
   animal = Animal.new(
-    name: Faker::Name.first_name,
-    description: Faker::Quote.famous_last_words,
+    name:    Faker::Creature::Animal.name,
+    description:Faker::Quote.famous_last_words,
+    category: "insects",
+    age: Faker::Number.within(range: 1..100),
+    price: 10,
+    address: '5 Rue de Thorigny, 75003 Paris',
+    user_id: user2.id
+  )
+  animal.save!
+end
+
+3.times do
+  animal = Animal.new(
+    name:    Faker::Creature::Animal.name,
+    description:Faker::Quote.famous_last_words,
     category: "pisces",
     age: Faker::Number.within(range: 1..100),
+    price: 55,
+    address: '10 Bd Montmartre, 75009 Paris',
     user_id: user3.id
   )
   animal.save!
@@ -94,6 +102,8 @@ end
     description: Faker::Quote.famous_last_words,
     category: "birds",
     age: Faker::Number.within(range: 1..100),
+    price: 20,
+    address: '8 Rue Elzevir, 75003 Paris',
     user_id: user4.id
   )
   animal.save!
@@ -105,6 +115,8 @@ end
     description: Faker::Quote.famous_last_words,
     category: "reptiles",
     age: Faker::Number.within(range: 1..100),
+    price: 14,
+    address: '60 Rue Réaumur, 75003 Paris',
     user_id: user5.id
   )
   animal.save!
