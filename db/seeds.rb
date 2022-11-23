@@ -6,51 +6,51 @@ Animal.destroy_all
 User.destroy_all
 
  user1 = User.new(
-  first_name:Faker::Name.first_name,
-  last_name:Faker::Name.last_name,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: "123456",
-  description:Faker::Quote.famous_last_words,
+  description: Faker::Quote.famous_last_words,
   password_confirmation: '123456'
  )
  user1.save!
 
  user2 = User.new(
-  first_name:Faker::Name.first_name,
-  last_name:Faker::Name.last_name,
-  email:Faker::Internet.email,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  email: Faker::Internet.email,
   password: "123456",
-  description:Faker::Quote.famous_last_words,
+  description: Faker::Quote.famous_last_words,
   password_confirmation: '123456'
  )
  user2.save!
 
  user3 = User.new(
-  first_name:Faker::Name.first_name,
-  last_name:Faker::Name.last_name,
-  email:Faker::Internet.email,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  email: Faker::Internet.email,
   password: "123456",
-  description:Faker::Quote.famous_last_words,
+  description: Faker::Quote.famous_last_words,
   password_confirmation: '123456'
  )
  user3.save!
 
  user4 = User.new(
-  first_name:Faker::Name.first_name,
-  last_name:Faker::Name.last_name,
-  email:Faker::Internet.email,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  email: Faker::Internet.email,
   password: "123456",
-  description:Faker::Quote.famous_last_words,
+  description: Faker::Quote.famous_last_words,
   password_confirmation: '123456'
  )
  user4.save!
 
  user5 = User.new(
-  first_name:Faker::Name.first_name,
-  last_name:Faker::Name.last_name,
-  email:Faker::Internet.email,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  email: Faker::Internet.email,
   password: "123456",
-  description:Faker::Quote.famous_last_words,
+  description: Faker::Quote.famous_last_words,
   password_confirmation: '123456'
  )
  user5.save!
@@ -61,8 +61,8 @@ puts 'Creating 15 fake animals...'
   animal = Animal.new(
     name:    Faker::Creature::Animal.name,
     description:Faker::Quote.famous_last_words,
-    category: "insect",
-    age: 7,
+    category: "mammals",
+    age: Faker::Number.within(range: 1..100),
     price: 43,
     address: '5 Rue Crespin du Gast, 75011 Paris',
     user_id: user1.id
@@ -74,8 +74,8 @@ end
   animal = Animal.new(
     name:    Faker::Creature::Animal.name,
     description:Faker::Quote.famous_last_words,
-    category: "pet",
-    age: 15,
+    category: "insects",
+    age: Faker::Number.within(range: 1..100),
     price: 10,
     address: '5 Rue de Thorigny, 75003 Paris',
     user_id: user2.id
@@ -87,8 +87,8 @@ end
   animal = Animal.new(
     name:    Faker::Creature::Animal.name,
     description:Faker::Quote.famous_last_words,
-    category: "fish",
-    age: 5,
+    category: "pisces",
+    age: Faker::Number.within(range: 1..100),
     price: 55,
     address: '10 Bd Montmartre, 75009 Paris',
     user_id: user3.id
@@ -98,10 +98,10 @@ end
 
 3.times do
   animal = Animal.new(
-    name:    Faker::Creature::Animal.name,
-    description:Faker::Quote.famous_last_words,
+    name: Faker::Name.first_name,
+    description: Faker::Quote.famous_last_words,
     category: "birds",
-    age: 3,
+    age: Faker::Number.within(range: 1..100),
     price: 20,
     address: '8 Rue Elzevir, 75003 Paris',
     user_id: user4.id
@@ -111,10 +111,10 @@ end
 
 3.times do
   animal = Animal.new(
-    name:    Faker::Creature::Animal.name,
-    description:Faker::Quote.famous_last_words,
+    name: Faker::Name.first_name,
+    description: Faker::Quote.famous_last_words,
     category: "reptiles",
-    age: 60,
+    age: Faker::Number.within(range: 1..100),
     price: 14,
     address: '60 Rue Réaumur, 75003 Paris',
     user_id: user5.id
