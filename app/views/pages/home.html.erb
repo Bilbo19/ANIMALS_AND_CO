@@ -7,60 +7,167 @@
   </div>
 </div>
 
+<div class= "block" >
+
+  <div class="heading-text">
+    <h3 class="font-762333 h3 text-color-187676-color">
+      <span>Comment louer un animal de compagnie ?</span>
+    </h3>
+  </div>
+
+  <div class= "d-flex justify-content-between" >
+
+    <div class="icon-box-icon-box-left">
+      <div class="icon-box-icon-fa-container">
+        <span class="text-color-192233-color btn-disable-hover">
+          <i class="fa fa-tag fa-3x fa-fw"></i>
+        </span>
+        </div>
+      <div class="icon-box-content-left">
+        <div class="icon-box-heading icon-box-fa-3x">
+          <h6 class="font-762333 h6">JE CHOISIS...</h6>
+        </div>
+        <p>"Nous mettons à votre disposition une large collection d'animaux de compagnie."
+        " Il y en a pour tous les goûts : "
+        <strong>choisissez celui qui vous ressemble</strong>
+        "!"
+        </p>
+      </div>
+    </div>
+
+    <div class="icon-box-center">
+        <div class="icon-box-icon-fa-container">
+          <span class="text-color-192233-color btn-disable-hover">
+            <i class="fa fa-cart-arrow-down fa-3x fa-fw"></i>
+          </span>
+        </div>
+      <div class="icon-box-content-center">
+        <div class="icon-box-heading icon-box-fa-3x">
+          <h6 class="font-762333 h6">JE COMMANDE ...</h6>
+        </div>
+        <p><strong>À chacun sa formule</strong>
+        " ! Choisissez parmi nos 3 formules de location à la carte :&nbsp;"
+        <strong>Un peu</strong>
+        " location/jour ; "
+        <strong>Beaucoup</strong>
+        " location/mois ; "
+        <strong>À la folie</strong>
+        " location/an.
+        </p>
+      </div>
+    </div>
+
+    <div class="icon-box-icon-box-right">
+      <div class="icon-box-icon-fa-container">
+        <span class="text-color-192233-color btn-disable-hover">
+        <i class="fa fa-gift fa-3x fa-fw"></i>
+        </span>
+      </div>
+        <div class="icon-box-content-right">
+          <div class="icon-box-heading icon-box-fa-3x">
+            <h6 class="font-762333 h6">JE REÇOIS !</h6>
+          </div>
+          <p>
+          Nous vous proposons différents modes de livraison : "
+          <strong>À la maison</strong>
+          " ou en "
+          <strong>Point relais</strong>
+          " (<em>animaleries...</em>), selon
+          <strong>vos envies, vos disponibilités et vos attentes !
+          </strong>
+          </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
 
 <div class="container">
   <div class="d-flex justify-content-between">
 
     <div class="cards-list">
 
-      <div class="card">
-        <div class="card_image"> <img src="https://cdn-icons-png.flaticon.com/512/1254/1254989.png?w=740&t=st=1669119772~exp=1669120372~hmac=625413eb5ed83d77a6366f303c97c53863cff1f6401afe8e4b2fff5e0c97cb1b" /> </div>
-        <div class="card_title title-black">
-          <p>Mammals</p>
+      <%= link_to animals_path({category: "mammals"}) do %>
+        <div class="card" id=card>
+          <div class="card_image"> <img src="https://cdn-icons-png.flaticon.com/512/1254/1254989.png?w=740&t=st=1669119772~exp=1669120372~hmac=625413eb5ed83d77a6366f303c97c53863cff1f6401afe8e4b2fff5e0c97cb1b" /> </div>
+          <div class="card_title title-black">
+            <p style="color: black;text-decoration: underline white;">Mammals
+            </p>
+          </div>
         </div>
-      </div>
+      <% end %>
 
-      <div class="card">
-        <div class="card_image"> <img src="https://cdn-icons-png.flaticon.com/512/1254/1254989.png?w=740&t=st=1669119772~exp=1669120372~hmac=625413eb5ed83d77a6366f303c97c53863cff1f6401afe8e4b2fff5e0c97cb1b" /> </div>
-        <div class="card_title title-black">
-          <p>Birds</p>
+      <%= link_to animals_path({category: "birds"}) do %>
+        <div class="card">
+          <div class="card_image"> <img src="https://cdn-icons-png.flaticon.com/512/1254/1254989.png?w=740&t=st=1669119772~exp=1669120372~hmac=625413eb5ed83d77a6366f303c97c53863cff1f6401afe8e4b2fff5e0c97cb1b" /> </div>
+          <div class="card_title title-black">
+            <p style="color: black;text-decoration: underline white;">
+            Birds</p>
+          </div>
         </div>
-      </div>
+      <% end %>
 
-      <div class="card">
-        <div class="card_image"> <img src="https://cdn-icons-png.flaticon.com/512/1254/1254954.png?w=740&t=st=1669119767~exp=1669120367~hmac=d31f651f3ff32e2bd7c5d8d10d68a692074404942b0853bb24a3f7db8e619874" /> </div>
-        <div class="card_title title-black">
-          <p>Reptilians</p>
+      <%= link_to animals_path({category: "reptilians"}) do %>
+        <div class="card">
+          <div class="card_image"> <img src="https://cdn-icons-png.flaticon.com/512/1254/1254954.png?w=740&t=st=1669119767~exp=1669120367~hmac=d31f651f3ff32e2bd7c5d8d10d68a692074404942b0853bb24a3f7db8e619874" /> </div>
+          <div class="card_title title-black">
+            <p style="color: black;text-decoration: underline white;">
+            Reptilians</p>
+          </div>
         </div>
-      </div>
+      <% end %>
 
-      <div class="card">
-        <div class="card_image"> <img src="https://cdn-icons-png.flaticon.com/512/1254/1254970.png?w=740&t=st=1669119764~exp=1669120364~hmac=b9a6a88f63ec68ac7f623b9651f91fcb40157bb4e2e0c073628fdc6b85292dde" /> </div>
-        <div class="card_title title-black">
-          <p>Pisces</p>
+      <%= link_to animals_path({category: "pisces"}) do %>
+        <div class="card">
+          <div class="card_image"> <img src="https://cdn-icons-png.flaticon.com/512/1254/1254970.png?w=740&t=st=1669119764~exp=1669120364~hmac=b9a6a88f63ec68ac7f623b9651f91fcb40157bb4e2e0c073628fdc6b85292dde" /> </div>
+          <div class="card_title title-black">
+            <p style="color: black;text-decoration: underline white;">
+            Pisces</p>
+          </div>
         </div>
-      </div>
+      <% end %>
 
-      <div class="card">
-        <div class="card_image"> <img src="https://cdn-icons-png.flaticon.com/512/1254/1254985.png?w=740&t=st=1669119762~exp=1669120362~hmac=7bc9d199324315058cf87844750e654c532f11c58d8b7cff97c18398fcb778f0" /> </div>
-        <div class="card_title title-black">
-          <p>Aamphibians</p>
+      <%= link_to animals_path({category: "amphibians"}) do %>
+        <div class="card">
+          <div class="card_image"> <img src="https://cdn-icons-png.flaticon.com/512/1254/1254985.png?w=740&t=st=1669119762~exp=1669120362~hmac=7bc9d199324315058cf87844750e654c532f11c58d8b7cff97c18398fcb778f0" /> </div>
+          <div class="card_title title-black">
+            <p style="color: black;text-decoration: underline white;">
+            Amphibians</p>
+          </div>
         </div>
-      </div>
+      <% end %>
 
-      <div class="card">
-        <div class="card_image"> <img src="https://cdn-icons-png.flaticon.com/512/1254/1254962.png?w=740&t=st=1669120390~exp=1669120990~hmac=70d27eef1abb31671976ea47951864a01d8e3399814d407d2ff22a703b219f6c" /> </div>
-        <div class="card_title title-black">
-          <p>Insects</p>
+      <%= link_to animals_path({category: "insects"}) do %>
+        <div class="card">
+          <div class="card_image"> <img src="https://cdn-icons-png.flaticon.com/512/1254/1254962.png?w=740&t=st=1669120390~exp=1669120990~hmac=70d27eef1abb31671976ea47951864a01d8e3399814d407d2ff22a703b219f6c" /> </div>
+          <div class="card_title title-black">
+            <p style="color: black;text-decoration: underline white;">
+            Insects</p>
+          </div>
         </div>
-      </div>
+      <% end %>
 
-      <div class="card">
-        <div class="card_image"> <img src="https://cdn-icons-png.flaticon.com/512/1254/1254962.png?w=740&t=st=1669120390~exp=1669120990~hmac=70d27eef1abb31671976ea47951864a01d8e3399814d407d2ff22a703b219f6c" /> </div>
-         <div class="card_title title-black">
-          <p>Fantastics</p>
+      <%= link_to animals_path({category: "fantastics"}) do %>
+        <div class="card">
+          <div class="card_image"> <img src="https://cdn-icons-png.flaticon.com/512/1254/1254962.png?w=740&t=st=1669120390~exp=1669120990~hmac=70d27eef1abb31671976ea47951864a01d8e3399814d407d2ff22a703b219f6c" /> </div>
+          <div class="card_title title-black">
+            <p style="color: black;text-decoration: underline white;">Fantastics
+            </p>
+          </div>
         </div>
-      </div>
+      <% end %>
+
+      <%= link_to animals_path do %>
+        <div class="card">
+          <div class="card_image"> <img src="https://cdn-icons-png.flaticon.com/512/1254/1254989.png?w=740&t=st=1669119772~exp=1669120372~hmac=625413eb5ed83d77a6366f303c97c53863cff1f6401afe8e4b2fff5e0c97cb1b" /> </div>
+          <div class="card_title title-black">
+            <p style="color: black;text-decoration: underline white;">Surprise!
+            </p>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
