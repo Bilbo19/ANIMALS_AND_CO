@@ -62,6 +62,7 @@ puts 'Creating 15 fake animals...'
     description:Faker::Quote.famous_last_words,
     category: "insect",
     age: 7,
+    price: 43,
     user_id: user1.id
   )
   animal.save!
@@ -73,6 +74,7 @@ end
     description:Faker::Quote.famous_last_words,
     category: "pet",
     age: 15,
+    price: 10,
     user_id: user2.id
   )
   animal.save!
@@ -84,6 +86,7 @@ end
     description:Faker::Quote.famous_last_words,
     category: "fish",
     age: 5,
+    price: 55,
     user_id: user3.id
   )
   animal.save!
@@ -95,6 +98,7 @@ end
     description:Faker::Quote.famous_last_words,
     category: "birds",
     age: 3,
+    price: 20,
     user_id: user4.id
   )
   animal.save!
@@ -106,6 +110,7 @@ end
     description:Faker::Quote.famous_last_words,
     category: "reptiles",
     age: 60,
+    price: 14,
     user_id: user5.id
   )
   animal.save!
