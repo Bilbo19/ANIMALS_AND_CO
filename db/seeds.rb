@@ -2,6 +2,8 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 require 'faker'
 
+Animal.destroy_all
+User.destroy_all
 
  user1 = User.new(
   first_name:Faker::Name.first_name,
@@ -53,7 +55,6 @@ require 'faker'
  )
  user5.save!
 
-
 puts 'Creating 15 fake animals...'
 
 3.times do
@@ -63,6 +64,7 @@ puts 'Creating 15 fake animals...'
     category: "insect",
     age: 7,
     price: 43,
+    address: '5 Rue Crespin du Gast, 75011 Paris',
     user_id: user1.id
   )
   animal.save!
@@ -75,6 +77,7 @@ end
     category: "pet",
     age: 15,
     price: 10,
+    address: '5 Rue de Thorigny, 75003 Paris',
     user_id: user2.id
   )
   animal.save!
@@ -87,6 +90,7 @@ end
     category: "fish",
     age: 5,
     price: 55,
+    address: '10 Bd Montmartre, 75009 Paris',
     user_id: user3.id
   )
   animal.save!
@@ -99,6 +103,7 @@ end
     category: "birds",
     age: 3,
     price: 20,
+    address: '8 Rue Elzevir, 75003 Paris',
     user_id: user4.id
   )
   animal.save!
@@ -111,6 +116,7 @@ end
     category: "reptiles",
     age: 60,
     price: 14,
+    address: '60 Rue Réaumur, 75003 Paris',
     user_id: user5.id
   )
   animal.save!
