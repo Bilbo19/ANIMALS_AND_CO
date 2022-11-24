@@ -17,37 +17,22 @@ body {
   background: #111 !important;
 }
 
+<<<<<<< HEAD
 
-
-.card {
-  background: #222;
-  border: 1px solid #dd2476;
-  color: rgba(250, 250, 250, 0.8);
-  margin-bottom: 2rem;
+=======
+.cards-list {
+  border-radius: 2px;
+  column-gap: 40px;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  row-gap: 40px;
 }
+>>>>>>> 5fd6f4518a9dbc8074b7312e0421a98dd09e4ce2
 
 .card-image img {
   width: 2000px;
   height: 100px;
   border-radius: 3px;
-}
-
-.btn {
-  border: 5px solid;
-  border-image-slice: 1;
-  background: var(--gradient) !important;
-  border-image-source:  var(--gradient) !important;
-  text-decoration: none;
-  transition: all .4s ease;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-}
-
-.btn:hover, .btn:focus {
-  background: var(--gradient) !important;
-  border: 5px solid #fff !important;
-  box-shadow: #222 1px 0 10px;
-  text-decoration: underline;
-  -webkit-background-clip: none !important;
-  -webkit-text-fill-color: #fff !important;
 }
