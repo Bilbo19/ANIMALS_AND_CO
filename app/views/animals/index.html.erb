@@ -25,102 +25,16 @@
 
 
 <div class="container mx-auto mt-4">
-<div class="row">
-  <div class="col-6">
-    <div class="cards-list">
-      <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-          <%= image_tag "dromadaire.jpg" %>
-            <div class="card-body">
-              <h5 class="card-title">Name:...</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-              <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-              <p class="card-text">beginning of description ....</p>
-              <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
-            </div>
-        </div>
+  <div class="row-map">
+      <div class="cards-list">
+        <% @animals.each do |animal| %>
+          <%= render 'animal_card', animal: animal %>
+        <% end %>
       </div>
-
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <%= image_tag "vache.jpg" %>
-          <div class="card-body">
-            <h5 class="card-title">Name:...</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-            <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-            <p class="card-text">beginning of description ....</p>
-            <a href="#" class="btn  mr-2"><i class="fas fa-link"></i> Visit</a>
-          </div>
+      <div class="map" style="width: 40%; height: 900px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
     </div>
-
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <%= image_tag "monkey.jpg" %>
-          <div class="card-body">
-            <h5 class="card-title">Name:...</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-            <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-            <p class="card-text">beginning of description ....</p>
-            <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <%= image_tag "horse.jpg" %>
-          <div class="card-body">
-            <h5 class="card-title">Name:...</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-            <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-            <p class="card-text">beginning of description ....</p>
-            <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
-          </div>
-      </div>
-    </div>
-
-
-
-
-
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <%= image_tag "antilope.jpg" %>
-          <div class="card-body">
-            <h5 class="card-title">Name: </h5>
-            <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-            <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-            <p class="card-text">beginning of description ....</p>
-            <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <%= image_tag "souris.jpg" %>
-            <div class="card-body">
-              <h5 class="card-title">Name:...</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-              <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-              <p class="card-text">beginning of description ....</p>
-              <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
-            </div>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-  <div class="col-6">
-    <div class="map" style="width: 100%; height: 600px;"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-
-    </div>
-  </div>
-</div>
-
-</div>
+   </div>
