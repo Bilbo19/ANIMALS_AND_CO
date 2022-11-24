@@ -1,18 +1,26 @@
 
-<h1><%= @animal.name %></h1>
-<p><%= @animal.user.first_name %></p>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag "orque.jpg" %>
+    </div>
+    <div class="carousel-item">
+       <%= image_tag "espadon.jpg" %>
+    </div>
+    <div class="carousel-item">
+       <%= image_tag "piranha.jpg" %>
+    </div>
+  </div>
+</div>
 
-<% if @animal.user == current_user %>
-<%= link_to "Delete", animal_path(@animal), data:{turbo_method: :delete, turbo_confirm:"Are you sure ?"} %>
-<% end %>
-
-<% if policy(@animal).edit? %>
-  <%= link_to "Edit this animal", edit_animals_path(@animal) %> |
-<% end %>
-
-<%= simple_form_for [@animal, @booking] do |f| %>
-  <%= f.error_notification %>
-  <%= f.input :start_date, placeholder: 'start' %>
-  <%= f.input :end_date, placeholder: 'end' %>
-  <%= f.submit class: 'btn btn-flat' %>
-<% end %>
+<div class="row-inner">
+   <div class="col-lg-6">
+<div class="card-group" style="max-width: 25rem;">
+  <div class="card">
+    <%= image_tag "espadon.jpg" %>
+    <div class="card-body">
+      <h5 class="card-title">Espadon</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
