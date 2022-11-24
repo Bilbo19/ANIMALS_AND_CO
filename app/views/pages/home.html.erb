@@ -118,11 +118,11 @@
 
 
 
-        <div class="cards-list">
+        <div class="cards-list-home">
 
           <%= link_to animals_path({category: "mammals"}) do %>
             <div class="card" id=card>
-              <div class="card_image"> cc </div>
+              <div class="card_image"> <%= image_tag "dromadaire.jpg" %></div>
               <div class="card_title title-black">
                 <p style="color: black;text-decoration: underline white;">Mammals
                 </p>
@@ -152,7 +152,7 @@
 
           <%= link_to animals_path({category: "pisces"}) do %>
             <div class="card">
-              <div class="card_image"> <%= image_tag "cachalot.jpg" %> </div>
+              <div class="card_image"> <%= image_tag "espadon.jpg" %> </div>
               <div class="card_title title-black">
                 <p style="color: black;text-decoration: underline white;">
                 Pisces</p>

@@ -10,13 +10,31 @@
   background-color: white;
 }
 
-.cards-list {
+.cards-list-home {
   column-gap: 40px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 30px;
   margin-bottom: 30px;
   row-gap: 30px;
+}
+
+.cards-list-index {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  padding: 10;
+}
+
+#maps {
+  position: sticky;
+  width: 50px;
+}
+
+.row-map {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
 }
 
 .card {
