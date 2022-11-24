@@ -2,6 +2,7 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 require 'faker'
 require 'open-uri'
+
 Animal.destroy_all
 User.destroy_all
  user1 = User.new(
@@ -50,6 +51,7 @@ User.destroy_all
  )
  user5.save!
 puts 'Creating 15 fake animals...'
+
 # 3.times do
 #   animal = Animal.new(
 #     name:    Faker::Creature::Animal.name,
@@ -62,6 +64,7 @@ puts 'Creating 15 fake animals...'
 #   )
 #   animal.save!
 # end
+
 # 3.times do
 #   animal = Animal.new(
 #     name:    Faker::Creature::Animal.name,
@@ -110,6 +113,7 @@ puts 'Creating 15 fake animals...'
 #   )
 #   animal.save!
 # end
+
 animal = Animal.new(
   name: "Oscar",
   description: 'The whale is the largest animal in the world',
@@ -122,6 +126,7 @@ animal = Animal.new(
   file = URI.open("https://www.wildlifearchives.com/wp-content/uploads/2018/01/whales-most-beautiful-picture-1516721809gkn48.jpg")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
+
 animal = Animal.new(
   name: 'Denis',
   description: 'The donkey is like the horse but smaller',
@@ -134,6 +139,7 @@ animal = Animal.new(
   file = URI.open("https://secure.img1-cg.wfcdn.com/im/87624362/compr-r85/1539/153900257/standing-donkey-statue.jpg")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
+
 animal = Animal.new(
   name: "Lucas",
   description: "penguin can fly",
@@ -146,6 +152,7 @@ animal = Animal.new(
   file = URI.open("https://i.pinimg.com/originals/04/f2/f8/04f2f89aa366ce677fa28fdfe0d6d7a2.jpg")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
+
 animal = Animal.new(
   name: "Alena",
   description: "The golden eagle is a bird of prey with a dark brown body.",
@@ -158,6 +165,7 @@ animal = Animal.new(
   file = URI.open("https://media.istockphoto.com/id/453082743/fr/photo/golden-eagle.jpg?s=612x612&w=0&k=20&c=Q75BuJdYYh2C79RolaLjSDAArBBwvoaoQH06xZaH0y0=")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
+
 animal = Animal.new(
   name: "Youssef",
   description: "The alligator is a reptile of the order of crocodiles and it is an aggressive animal",
@@ -170,6 +178,7 @@ animal = Animal.new(
   file = URI.open("https://www.earthtouchnews.com/media/1281943/02042015-_MG_0501.jpg")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
+
 animal = Animal.new(
   name: "Veronika",
   description: "The Cobra is a poisonous snake",
@@ -182,6 +191,7 @@ animal = Animal.new(
   file = URI.open("https://preview.redd.it/52ialyqvcxg51.jpg?width=640&crop=smart&auto=webp&s=07d5c20f5f947484d8f6edfd030c5ad17ddfe5d4")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
+
 animal = Animal.new(
   name: "Carlos",
   description: "Sardine is a small, long-bodied fish.",
@@ -194,6 +204,7 @@ animal = Animal.new(
   file = URI.open("https://thumbs.dreamstime.com/b/sardines-9818904.jpg")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
+
 animal = Animal.new(
   name: "Seydou",
   description: "La carpe est un poisson d'eau douce qui provient d'Asie",
@@ -206,6 +217,7 @@ animal = Animal.new(
   file = URI.open("https://www.jardiland.com/wp-content/uploads/2017/12/nourrir-carpes-koi-1.jpg")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
+
 animal = Animal.new(
   name: "Youssef",
   description: "The green frog is green-brown in color and measures a good ten centimeters when adult",
@@ -218,6 +230,7 @@ animal = Animal.new(
   file = URI.open("https://a-z-animals.com/media/2021/12/Beautiful-Green-Animals-Red-Eyed-Tree-Frog.jpg")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
+
 animal = Animal.new(
   name: "Lucas",
   description: "salamander with shiny black or bright yellow-spotted skin covered in poisonous mucus",
@@ -230,6 +243,7 @@ animal = Animal.new(
   file = URI.open("http://pyrros.fr/wp-content/uploads/2017/03/IMG_9412-Salamandre-tachet%C3%A9e.jpg")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
+
 animal = Animal.new(
   name: "Maya",
   description: "The bee, an insect that produces honey",
@@ -242,6 +256,7 @@ animal = Animal.new(
   file = URI.open("https://images.unsplash.com/photo-1568526381923-caf3fd520382?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
+
 animal = Animal.new(
   name: "Alena",
   description: "The caterpillar is a butterfly larva",
@@ -254,6 +269,7 @@ animal = Animal.new(
   file = URI.open("https://en.bcdn.biz/Images/2016/12/1/47d501a8-93d2-4560-91a2-6f22386bf9c4.jpg")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
+
 animal = Animal.new(
   name: "Marek",
   description: "Animal with snake wings, claws and tail",
@@ -266,6 +282,7 @@ animal = Animal.new(
   file = URI.open("https://4.bp.blogspot.com/-lzuGKv1gQKs/Vgz1stkZvOI/AAAAAAAAAms/7tClxaa__Gg/s1600/Dragons%2Bare%2BReal.%2BFlying%2BDragon.png")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
+
 animal = Animal.new(
   name: "Didier",
   description: "The unicorn is a single horned creature",
