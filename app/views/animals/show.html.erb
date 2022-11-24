@@ -1,26 +1,21 @@
-
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <%= image_tag "orque.jpg" %>
+<div class="container d-flex">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="1500">
+        <%= image_tag "orque.jpg" %>
+      </div>
+      <div class="carousel-item" data-bs-interval="1500">
+        <%= image_tag "espadon.jpg" %>
+      </div>
+      <div class="carousel-item" data-bs-interval="1500">
+        <%= image_tag "piranha.jpg" %>
+      </div>
     </div>
-    <div class="carousel-item">
-       <%= image_tag "espadon.jpg" %>
-    </div>
-    <div class="carousel-item">
-       <%= image_tag "piranha.jpg" %>
-    </div>
+  </div>
+  <div>
+    <h5 class="card-title"> Prédateur</h5>
+    <p class="card-text"> Ces beaux spécimens n'attendent que vous pour être adopter.</p>
+    <p class="card-text"><small class="text-muted"> 3 en stock</small></p>
+    <a class="btn btn-gradient" href="#">Ajouter au panier</a>
   </div>
 </div>
-
-<div class="row-inner">
-   <div class="col-lg-6">
-<div class="card-group" style="max-width: 25rem;">
-  <div class="card">
-    <%= image_tag "espadon.jpg" %>
-    <div class="card-body">
-      <h5 class="card-title">Espadon</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>

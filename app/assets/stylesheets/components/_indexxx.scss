@@ -1,8 +1,26 @@
+#carouselExampleSlidesOnly {
+  width: 500px;
+}
+
+.carousel-inner, .carousel-item, .carousel-item img {
+  width: 100%;
+}
+
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.carousel-inner {
 
 
-.card {
+}
+
+
+.card-title {
   color: #C25100;
   font-family: 'Lobster';
+  font-weight: bold;
 }
 
 
@@ -14,5 +32,20 @@ font-family: Georgia;
 margin: 0 auto;
 top: 120%;
 color: white;
-width: 40%;
+width: 50%;
+}
+
+
+.btn-gradient {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  float: right;
+  font-weight: bold;
+  background: linear-gradient(#167FFB, #0F60C4);
+  transition: background 0.3s ease;
+  border: 1px solid #0F60C4;
+  position: absolute;
+    right: 20px;
+    bottom: 50px;
 }
