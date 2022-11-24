@@ -57,18 +57,16 @@ User.destroy_all
 
 puts 'Creating 15 fake animals...'
 
-3.times do
-  animal = Animal.new(
-    name:    Faker::Creature::Animal.name,
-    description:Faker::Quote.famous_last_words,
-    category: "mammals",
-    age: Faker::Number.within(range: 1..100),
-    price: 43,
-    address: '5 Rue Crespin du Gast, 75011 Paris',
-    user_id: user1.id
-  )
-  animal.save!
-end
+animal = Animal.new(
+  name: "Oscar",
+  description: "Blablablabla",
+  category: "mammals",
+  age: 12,
+  price: 43,
+  address: '5 Rue Crespin du Gast, 75011 Paris',
+  user_id: user1.id
+)
+animal.save!
 
 3.times do
   animal = Animal.new(
