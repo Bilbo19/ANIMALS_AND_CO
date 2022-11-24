@@ -5,7 +5,6 @@ require 'open-uri'
 
 Animal.destroy_all
 User.destroy_all
-
  user1 = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -15,7 +14,6 @@ User.destroy_all
   password_confirmation: '123456'
  )
  user1.save!
-
  user2 = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -25,7 +23,6 @@ User.destroy_all
   password_confirmation: '123456'
  )
  user2.save!
-
  user3 = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -35,7 +32,6 @@ User.destroy_all
   password_confirmation: '123456'
  )
  user3.save!
-
  user4 = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -45,7 +41,6 @@ User.destroy_all
   password_confirmation: '123456'
  )
  user4.save!
-
  user5 = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -55,7 +50,6 @@ User.destroy_all
   password_confirmation: '123456'
  )
  user5.save!
-
 puts 'Creating 15 fake animals...'
 
 # 3.times do
@@ -83,7 +77,6 @@ puts 'Creating 15 fake animals...'
 #   )
 #   animal.save!
 # end
-
 # 3.times do
 #   animal = Animal.new(
 #     name:    Faker::Creature::Animal.name,
@@ -96,7 +89,6 @@ puts 'Creating 15 fake animals...'
 #   )
 #   animal.save!
 # end
-
 # 3.times do
 #   animal = Animal.new(
 #     name: Faker::Name.first_name,
@@ -109,7 +101,6 @@ puts 'Creating 15 fake animals...'
 #   )
 #   animal.save!
 # end
-
 # 3.times do
 #   animal = Animal.new(
 #     name: Faker::Name.first_name,
