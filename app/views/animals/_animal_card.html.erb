@@ -1,13 +1,13 @@
 <div class="col-md-4">
   <div class="card" style="width: 18rem;">
-    <img src="<%= animal.photo %>" class="card-img">
+    <%= cl_image_tag(animal.photo.key) %>
       <div class="card-body">
         <h5 class="card-title"><%= animal.name %></h5>
         <h6 class="card-subtitle mb-2 text-muted"><%= animal.price %>€</h6>
         <h6 class="card-subtitle mb-2 text-muted"><%= animal.age %>years</h6>
         <p class="card-text"><%= animal.category %></p>
         <%= link_to animal_path(animal) do %>
-          <i class="btn btn-gradient">Visit</i>
+          <i class="btn btn-gradient">Go!</i>
         <% end %>
       </div>
   </div>
