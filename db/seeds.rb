@@ -58,18 +58,6 @@ User.destroy_all
 
 puts 'Creating 15 fake animals...'
 
-<<<<<<< HEAD
-animal = Animal.new(
-  name: "Oscar",
-  description: "Blablablabla",
-  category: "mammals",
-  age: 12,
-  price: 43,
-  address: '5 Rue Crespin du Gast, 75011 Paris',
-  user_id: user1.id
-)
-animal.save!
-=======
 # 3.times do
 #   animal = Animal.new(
 #     name:    Faker::Creature::Animal.name,
@@ -78,11 +66,10 @@ animal.save!
 #     age: Faker::Number.within(range: 1..100),
 #     price: 43,
 #     address: '5 Rue Crespin du Gast, 75011 Paris',
-#     user_id: user1.id
+#     user_id: User.all.sample
 #   )
 #   animal.save!
 # end
->>>>>>> 97b7728c74015ec8d43159fb500b99f894677e96
 
 # 3.times do
 #   animal = Animal.new(
@@ -135,7 +122,6 @@ animal.save!
 #   )
 #   animal.save!
 # end
-
 
 animal = Animal.new(
   name: "Oscar",
@@ -314,7 +300,7 @@ animal = Animal.new(
   price: 220,
   address: '3 Rue Chaligny, 75012 Paris',
   user: User.all.sample
-  )
+)
   file = URI.open("https://top10animal.com/wp-content/uploads/2021/07/unicorn3.jpg")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
