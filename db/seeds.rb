@@ -136,7 +136,6 @@ animal = Animal.new(
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
 
-
 animal = Animal.new(
   name: 'Denis',
   description: 'The donkey is like the horse but smaller',

@@ -5,52 +5,38 @@
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="2000" style= "height: 700px;">
-            <%= image_tag "crapeau.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
+            <%= image_tag "antilope.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
           </div>
           <div class="carousel-item" data-bs-interval="2000" style= "height: 700px;">
-            <%= image_tag "lézard.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
+            <%= image_tag "horse.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
           </div>
           <div class="carousel-item" data-bs-interval="2000" style= "height: 700px; object-fit: cover;">
-            <%= image_tag "papillon.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
+            <%= image_tag "vache.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
           </div>
 
           <div class="carousel-item" data-bs-interval="2000" style= "height: 700px; object-fit: cover;">
-            <%= image_tag "tortue.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
+            <%= image_tag "souris.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
           </div>
           <div class="carousel-item" data-bs-interval="2000" style= "height: 700px; object-fit: cover;">
-            <%= image_tag "anaconda.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000" style= "height: 700px; object-fit: cover;">
-            <%= image_tag "grenouille.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000" style= "height: 700px; object-fit: cover;">
-            <%= image_tag "orque.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000" style= "height: 700px; object-fit: cover;">
-            <%= image_tag "libellule.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
+            <%= image_tag "dromadaire.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <div class="container mx-auto mt-4">
+
+<div class="container mx-auto mt-4">
+  <div class="row-map">
       <div class="cards-list">
         <% @animals.each do |animal| %>
           <%= render 'animal_card', animal: animal %>
         <% end %>
       </div>
+      <div class="map" style="width: 40%; height: 900px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
     </div>
-  </div>
-
-  <div class="footer">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-  </div>
-
+   </div>
