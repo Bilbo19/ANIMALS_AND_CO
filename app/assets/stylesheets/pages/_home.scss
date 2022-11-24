@@ -10,6 +10,13 @@
   background-color: white;
 }
 
+.cards-list {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
 .cards-list-home {
   column-gap: 40px;
   display: grid;
@@ -34,14 +41,13 @@
   width: 100%;
   display: flex;
   margin: 0;
+  gap: 20px;
   justify-content: space-between;
 }
 
 .card {
   cursor: pointer;
   padding: 20px;
-  width: 440px;
-  height: 350px;
 }
 
 .card .card_title {
