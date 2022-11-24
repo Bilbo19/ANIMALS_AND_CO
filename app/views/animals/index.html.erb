@@ -1,164 +1,128 @@
-<div class="banner">
-  <div>
-    <div class="sample one">
-      <input type="text" name="search" placeholder="Search">
-      <button type="submit" class="btn btn-search fa fa-search"></button>
+<div class="container">
+    <div class="banner">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000" style= "height: 700px;">
+            <%= image_tag "antilope.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000" style= "height: 700px;">
+            <%= image_tag "horse.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000" style= "height: 700px; object-fit: cover;">
+            <%= image_tag "vache.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
+          </div>
+
+          <div class="carousel-item" data-bs-interval="2000" style= "height: 700px; object-fit: cover;">
+            <%= image_tag "souris.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000" style= "height: 700px; object-fit: cover;">
+            <%= image_tag "dromadaire.jpg", style: "height: 100%; width: 100%; object-fit: cover;" %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
 
-<div class="container">
 
-  <div class="container mx-auto mt-4">
+<div class="container mx-auto mt-4">
+<div class="row">
+  <div class="col-6">
     <div class="cards-list">
       <div class="col-md-4">
         <div class="card" style="width: 18rem;">
-    <img src="http://loremflickr.com/320/150?random=4" class="card-img">
-    <div class="card-body">
-      <h5 class="card-title">Name:...</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-      <p class="card-text">beginning of description ....</p>
-        <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
-    </div>
-    </div>
+          <%= image_tag "dromadaire.jpg" %>
+            <div class="card-body">
+              <h5 class="card-title">Name:...</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
+              <p class="card-text">beginning of description ....</p>
+              <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
+            </div>
+        </div>
       </div>
-        <div class="col-md-4">
-  <div class="card" style="width: 18rem;">
-    <img src="http://loremflickr.com/320/150?random=4" class="card-img">
-    <div class="card-body">
-      <h5 class="card-title">Name:...</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-      <p class="card-text">beginning of description ....</p>
-      <a href="#" class="btn  mr-2"><i class="fas fa-link"></i> Visit</a>
-    </div>
-    </div>
+
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <%= image_tag "vache.jpg" %>
+          <div class="card-body">
+            <h5 class="card-title">Name:...</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
+            <p class="card-text">beginning of description ....</p>
+            <a href="#" class="btn  mr-2"><i class="fas fa-link"></i> Visit</a>
+          </div>
       </div>
-            <div class="col-md-4">
-  <div class="card" style="width: 18rem;">
-    <img src="http://loremflickr.com/320/150?random=4" class="card-img">
-    <div class="card-body">
-      <h5 class="card-title">Name:...</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-      <p class="card-text">beginning of description ....</p>
-      <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
-    </div>
-    </div>
     </div>
 
-      <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-    <img src="http://loremflickr.com/320/150?random=4" class="card-img">
-    <div class="card-body">
-      <h5 class="card-title">Name:...</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-      <p class="card-text">beginning of description ....</p>
-        <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
-    </div>
-    </div>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <%= image_tag "monkey.jpg" %>
+          <div class="card-body">
+            <h5 class="card-title">Name:...</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
+            <p class="card-text">beginning of description ....</p>
+            <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
+          </div>
       </div>
-        <div class="col-md-4">
-  <div class="card" style="width: 18rem;">
-    <img src="http://loremflickr.com/320/150?random=4" class="card-img">
-    <div class="card-body">
-      <h5 class="card-title">Name:...</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-      <p class="card-text">beginning of description ....</p>
-      <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
     </div>
-    </div>
+
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <%= image_tag "horse.jpg" %>
+          <div class="card-body">
+            <h5 class="card-title">Name:...</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
+            <p class="card-text">beginning of description ....</p>
+            <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
+          </div>
       </div>
-            <div class="col-md-4">
-  <div class="card" style="width: 18rem;">
-    <img src="http://loremflickr.com/320/150?random=4" class="card-img">
-    <div class="card-body">
-      <h5 class="card-title">Name:...</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-      <p class="card-text">beginning of description ....</p>
-      <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
     </div>
-    </div>
-    </div>
-      <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-    <img src="http://loremflickr.com/320/150?random=4" class="card-img">
-    <div class="card-body">
-      <h5 class="card-title">Name:...</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-      <p class="card-text">beginning of description ....</p>
-        <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
-    </div>
-    </div>
+
+
+
+
+
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <%= image_tag "antilope.jpg" %>
+          <div class="card-body">
+            <h5 class="card-title">Name: </h5>
+            <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
+            <p class="card-text">beginning of description ....</p>
+            <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
+          </div>
       </div>
-        <div class="col-md-4">
-  <div class="card" style="width: 18rem;">
-    <img src="http://loremflickr.com/320/150?random=4" class="card-img">
-    <div class="card-body">
-      <h5 class="card-title">Name:...</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-      <p class="card-text">beginning of description ....</p>
-      <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
     </div>
-    </div>
+
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <%= image_tag "souris.jpg" %>
+            <div class="card-body">
+              <h5 class="card-title">Name:...</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
+              <p class="card-text">beginning of description ....</p>
+              <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
+            </div>
+        </div>
       </div>
-            <div class="col-md-4">
-  <div class="card" style="width: 18rem;">
-    <img src="http://loremflickr.com/320/150?random=4" class="card-img">
-    <div class="card-body">
-      <h5 class="card-title">Name:...</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-      <p class="card-text">beginning of description ....</p>
-      <a href="#" class="btn btn-primary mr-2"><i class="fas fa-link"></i> Visit</a>
-    </div>
-    </div>
-    </div>
-      <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-    <img src="http://loremflickr.com/320/150?random=4" class="card-img">
-    <div class="card-body">
-      <h5 class="card-title">Name:...</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-      <p class="card-text">beginning of description ....</p>
-        <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
-    </div>
-    </div>
-      </div>
-        <div class="col-md-4">
-  <div class="card" style="width: 18rem;">
-    <img src="http://loremflickr.com/320/150?random=4" class="card-img">
-    <div class="card-body">
-      <h5 class="card-title">Name:...</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-      <p class="card-text">beginning of description ....</p>
-      <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
-    </div>
-    </div>
-      </div>
-            <div class="col-md-4">
-  <div class="card" style="width: 18rem;">
-    <img src="http://loremflickr.com/320/150?random=4" class="card-img">
-    <div class="card-body">
-      <h5 class="card-title">Name:...</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Price: ... €</h6>
-          <h6 class="card-subtitle mb-2 text-muted">Age: ... ans</h6>
-      <p class="card-text">beginning of description ....</p>
-      <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit</a>
+
+
+
     </div>
   </div>
+  <div class="col-6">
+    <div class="map" style="width: 100%; height: 600px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
+</div>
+
+
 </div>
