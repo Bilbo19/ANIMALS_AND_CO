@@ -14,7 +14,8 @@
     </div>
 
 
-    <div class="card-booking">
+
+  <div class="card-booking">
       <% if @animal.user == current_user %>
       <%= link_to "Delete", animal_path(@animal), data:{turbo_method: :delete, turbo_confirm:"Are you sure ?"} %>
       <% end %>

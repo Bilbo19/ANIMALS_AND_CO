@@ -8,7 +8,7 @@ User.destroy_all
  user1 = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
-  email: Faker::Internet.email,
+  email: "contact@animalandco.com",
   password: "123456",
   description: Faker::Quote.famous_last_words,
   password_confirmation: '123456'
@@ -17,7 +17,7 @@ User.destroy_all
  user2 = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
-  email: Faker::Internet.email,
+  email: "moutaka@yahoo.fr",
   password: "123456",
   description: Faker::Quote.famous_last_words,
   password_confirmation: '123456'
@@ -51,68 +51,6 @@ User.destroy_all
  )
  user5.save!
 puts 'Creating 15 fake animals...'
-
-# 3.times do
-#   animal = Animal.new(
-#     name:    Faker::Creature::Animal.name,
-#     description:Faker::Quote.famous_last_words,
-#     category: "mammals",
-#     age: Faker::Number.within(range: 1..100),
-#     price: 43,
-#     address: '5 Rue Crespin du Gast, 75011 Paris',
-#     user_id: User.all.sample
-#   )
-#   animal.save!
-# end
-
-# 3.times do
-#   animal = Animal.new(
-#     name:    Faker::Creature::Animal.name,
-#     description:Faker::Quote.famous_last_words,
-#     category: "insects",
-#     age: Faker::Number.within(range: 1..100),
-#     price: 10,
-#     address: '5 Rue de Thorigny, 75003 Paris',
-#     user_id: user2.id
-#   )
-#   animal.save!
-# end
-# 3.times do
-#   animal = Animal.new(
-#     name:    Faker::Creature::Animal.name,
-#     description:Faker::Quote.famous_last_words,
-#     category: "pisces",
-#     age: Faker::Number.within(range: 1..100),
-#     price: 55,
-#     address: '10 Bd Montmartre, 75009 Paris',
-#     user_id: user3.id
-#   )
-#   animal.save!
-# end
-# 3.times do
-#   animal = Animal.new(
-#     name: Faker::Name.first_name,
-#     description: Faker::Quote.famous_last_words,
-#     category: "birds",
-#     age: Faker::Number.within(range: 1..100),
-#     price: 20,
-#     address: '8 Rue Elzevir, 75003 Paris',
-#     user_id: user4.id
-#   )
-#   animal.save!
-# end
-# 3.times do
-#   animal = Animal.new(
-#     name: Faker::Name.first_name,
-#     description: Faker::Quote.famous_last_words,
-#     category: "reptiles",
-#     age: Faker::Number.within(range: 1..100),
-#     price: 14,
-#     address: '60 Rue Réaumur, 75003 Paris',
-#     user_id: user5.id
-#   )
-#   animal.save!
-# end
 
 animal = Animal.new(
   name: "Oscar",
@@ -294,4 +232,5 @@ animal = Animal.new(
 )
   file = URI.open("https://top10animal.com/wp-content/uploads/2021/07/unicorn3.jpg")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
+  animal.save!
   animal.save!
