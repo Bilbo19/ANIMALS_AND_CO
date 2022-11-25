@@ -1,19 +1,41 @@
+<div class="body-show">
+  <div class="grid-show">
+    <div class="card-show">
+        <div class="image-show"><%= cl_image_tag(@animal.photo.key) %></div>
+        <div class="text-show">
+          <h5 class="card-show-title"><%= @animal.name %></h5>
+          <p class="card-text"><%= @animal.category %></p>
+          <h6 class="card-subtitle mb-2 text-muted"><%= @animal.age %> years</h6>
+          <h6 class="card-subtitle mb-2 text-muted"><%= @animal.price %> €</h6>
+        </div>
+          <div class="card-description">
+            <h6 class="card-subtitle mb-2 text-muted">description : <%= @animal.description %></h6>
+          </div>
+    </div>
 
-<h1><%= @animal.name %></h1>
-<p><%= @animal.user.first_name %></p>
 
-<% if @animal.user == current_user %>
-<%= link_to "Delete", animal_path(@animal), data:{turbo_method: :delete, turbo_confirm:"Are you sure ?"} %>
-<% end %>
 
-<% if policy(@animal).edit? %>
-  <%= link_to "Edit this animal", edit_animals_path(@animal) %> |
-<% end %>
+  <div class="card-booking">
+      <% if @animal.user == current_user %>
+      <%= link_to "Delete", animal_path(@animal), data:{turbo_method: :delete, turbo_confirm:"Are you sure ?"} %>
+      <% end %>
 
-<%= simple_form_for [@animal, @booking] do |f| %>
-  <%= f.error_notification %>
-  <%= f.input :start_date, placeholder: 'start' %>
-  <%= f.input :end_date, placeholder: 'end' %>
-  <%= f.submit class: 'btn btn-flat' %>
-<% end %>
+      <% if policy(@animal).edit? %>
+        <%= link_to "Edit this animal", edit_animals_path(@animal) %> |
+      <% end %>
 
+      <%= simple_form_for [@animal, @booking] do |f| %>
+      <%= f.error_notification %>
+      <%= f.input :start_date, as: :string,
+                    wrapper_html: { class: "mb-4" },
+                    label_html: { class: "form-label text-secondary fw-bold" },
+                    input_html: { data: { controller: "flatpickr" } } %>
+      <%= f.input :end_date, as: :string,
+                    wrapper_html: { class: "mb-4" },
+                    label_html: { class: "form-label text-secondary fw-bold" },
+                    input_html: { data: { controller: "flatpickr" } } %>
+      <%= f.submit class: 'btn btn-flat' %>
+    <% end %>
+    </div>
+  </div>
+</div>

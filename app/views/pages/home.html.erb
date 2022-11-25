@@ -38,7 +38,7 @@
   <div class="container mt-5">
     <div class= "block" >
 
-      <div class="heading-text">
+      <div class="heading-text-home">
         <h3 class="font-762333 h3 text-color-187676-color">
           <span>How to rent a pet ?</span>
         </h3>
@@ -46,7 +46,7 @@
 
       <div class= "d-flex justify-content-between" >
         <div class="icon-box-icon-box-left">
-          <div class="icon-box-icon-fa-container">
+          <div class="icon-box-icon-fa-container-home">
             <span class="text-color-192233-color btn-disable-hover">
               <i class="fa fa-tag fa-3x fa-fw"></i>
             </span>
@@ -113,16 +113,14 @@
 
 
   <div class="mr-2 ml-2 ">
-    <div class="row", style= "width: 100;">
+    <div class="row">
       <div class="d-flex justify-content-between">
-
-
-
         <div class="cards-list-home">
 
           <%= link_to animals_path({category: "mammals"}) do %>
-            <div class="card" id=card>
-              <div class="card_image"> <%= image_tag "dromadaire.jpg" %></div>
+            <div class="card-home">
+              <div class="card-image-home"> <%= image_tag "dromadaire.jpg" %>
+              </div>
               <div class="card_title title-black">
                 <p style="color: black;text-decoration: underline white;">Mammals
                 </p>
@@ -131,8 +129,8 @@
           <% end %>
 
           <%= link_to animals_path({category: "birds"}) do %>
-            <div class="card">
-              <div class="card_image"> <%= image_tag "pigeon.jpg" %> </div>
+            <div class="card-home">
+              <div class="card-image-home"> <%= image_tag "pigeon.jpg" %> </div>
               <div class="card_title title-black">
                 <p style="color: black;text-decoration: underline white;">
                 Birds</p>
@@ -141,8 +139,8 @@
           <% end %>
 
           <%= link_to animals_path({category: "reptilians"}) do %>
-            <div class="card">
-              <div class="card_image"> <%= image_tag "crocodile.jpg" %> </div>
+            <div class="card-home">
+              <div class="card-image-home"> <%= image_tag "crocodile.jpg" %> </div>
               <div class="card_title title-black">
                 <p style="color: black;text-decoration: underline white;">
                 Reptilians</p>
@@ -151,8 +149,8 @@
           <% end %>
 
           <%= link_to animals_path({category: "pisces"}) do %>
-            <div class="card">
-              <div class="card_image"> <%= image_tag "espadon.jpg" %> </div>
+            <div class="card-home">
+              <div class="card-image-home"> <%= image_tag "espadon.jpg" %> </div>
               <div class="card_title title-black">
                 <p style="color: black;text-decoration: underline white;">
                 Pisces</p>
@@ -161,8 +159,8 @@
           <% end %>
 
           <%= link_to animals_path({category: "amphibians"}) do %>
-            <div class="card">
-              <div class="card_image"> <%= image_tag "iguane.jpg" %> </div>
+            <div class="card-home">
+              <div class="card-image-home"> <%= image_tag "iguane.jpg" %> </div>
               <div class="card_title title-black">
                 <p style="color: black;text-decoration: underline white;">
                 Amphibians</p>
@@ -171,8 +169,8 @@
           <% end %>
 
           <%= link_to animals_path({category: "insects"}) do %>
-            <div class="card">
-              <div class="card_image"> <%= image_tag "mouche.jpg" %> </div>
+            <div class="card-home">
+              <div class="card-image-home"> <%= image_tag "mouche.jpg" %> </div>
               <div class="card_title title-black">
                 <p style="color: black;text-decoration: underline white;">
                 Insects</p>
@@ -181,8 +179,8 @@
           <% end %>
 
           <%= link_to animals_path({category: "fantastics"}) do %>
-            <div class="card">
-              <div class="card_image"> <%= image_tag "jormungand.jpg" %>  </div>
+            <div class="card-home">
+              <div class="card-image-home"> <%= image_tag "jormungand.jpg" %>  </div>
               <div class="card_title title-black">
                 <p style="color: black;text-decoration: underline white;">Fantastics
                 </p>
@@ -191,8 +189,8 @@
           <% end %>
 
           <%= link_to animals_path do %>
-            <div class="card">
-              <div class="card_image"> <%= image_tag "surprise.jpg" %> </div>
+            <div class="card-home">
+              <div class="card-image-home"> <%= image_tag "surprise.jpg" %> </div>
               <div class="card_title title-black">
                 <p style="color: black;text-decoration: underline white;">Surprise!
                 </p>
@@ -202,15 +200,5 @@
         </div>
       </div>
     </div>
-  </div>
-
-</div>
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
 </div>
