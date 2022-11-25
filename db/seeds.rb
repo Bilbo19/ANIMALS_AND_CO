@@ -233,3 +233,4 @@ animal = Animal.new(
   file = URI.open("https://top10animal.com/wp-content/uploads/2021/07/unicorn3.jpg")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!
+  animal.save!

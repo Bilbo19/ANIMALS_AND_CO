@@ -1,6 +1,4 @@
 .banner {
-  background-image:
-  url(https://images.photowall.com/products/48086/jungle-lake-with-wild-animals-1.jpg?h=699&q=85);
   background-position: right center;
   background-attachment: fixed;
   border-radius: 3px;
@@ -8,15 +6,12 @@
   margin-top: 1px;
   text-align: center;
 }
-
 :root {
   --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
 }
-
 body {
   background: #111 !important;
 }
-
 .cards-list {
   border-radius: 2px;
   column-gap: 40px;
@@ -26,7 +21,6 @@ body {
   margin-bottom: 30px;
   row-gap: 40px;
 }
-
 .card-image img {
   width: 2000px;
   height: 100px;
