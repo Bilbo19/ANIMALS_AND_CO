@@ -3,6 +3,7 @@
 require 'faker'
 require 'open-uri'
 
+Booking.destroy_all
 Animal.destroy_all
 User.destroy_all
  user1 = User.new(
@@ -26,7 +27,7 @@ User.destroy_all
  user3 = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
-  email: Faker::Internet.email,
+  email: "moutaka@yahoo.fr",
   password: "123456",
   description: Faker::Quote.famous_last_words,
   password_confirmation: '123456'
