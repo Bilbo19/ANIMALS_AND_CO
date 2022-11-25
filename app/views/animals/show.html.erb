@@ -5,15 +5,23 @@
 <% if @animal.user == current_user %>
 <%= link_to "Delete", animal_path(@animal), data:{turbo_method: :delete, turbo_confirm:"Are you sure ?"} %>
 <% end %>
-
 <% if policy(@animal).edit? %>
   <%= link_to "Edit this animal", edit_animals_path(@animal) %> |
 <% end %>
 
-<%= simple_form_for [@animal, @booking] do |f| %>
-  <%= f.error_notification %>
-  <%= f.input :start_date, placeholder: 'start' %>
-  <%= f.input :end_date, placeholder: 'end' %>
-  <%= f.submit class: 'btn btn-flat' %>
-<% end %>
-
+<div class="container mr-3 ml-3">
+  <div class="card" style= "width: 700px;">
+    <%= simple_form_for [@animal, @booking] do |f| %>
+      <%= f.error_notification %>
+      <%= f.input :start_date, as: :string,
+                    wrapper_html: { class: "mb-4" },
+                    label_html: { class: "form-label text-secondary fw-bold" },
+                    input_html: { data: { controller: "flatpickr" } } %>
+      <%= f.input :end_date, as: :string,
+                    wrapper_html: { class: "mb-4" },
+                    label_html: { class: "form-label text-secondary fw-bold" },
+                    input_html: { data: { controller: "flatpickr" } } %>
+      <%= f.submit class: 'btn btn-flat' %>
+    <% end %>
+  </div>
+</div>
