@@ -18,7 +18,7 @@
 
 
 .card-title {
-  color: #C25100;
+  color: #000000;
   font-family: 'Lobster';
   font-weight: bold;
 }
@@ -46,6 +46,25 @@ width: 50%;
   transition: background 0.3s ease;
   border: 1px solid #0F60C4;
   position: absolute;
-    right: 20px;
-    bottom: 50px;
+    nav-left: 200px;
+    bottom: 250px;
+}
+
+.card-animal {
+  font-weight: bold;
+  color: #777777;
+  border-bottom: #C25100;
+
+}
+
+.animal-info {
+  width: 30%;
+  margin-left: 40px;
+  margin-top: 40px;
+  margin-bottom: 40%;
+}
+
+.card-text {
+  color: #050306;
+
 }
