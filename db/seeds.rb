@@ -18,7 +18,7 @@ User.destroy_all
  user2 = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
-  email: "moutaka@yahoo.fr",
+  email: "moutaka2@yahoo.fr",
   password: "123456",
   description: Faker::Quote.famous_last_words,
   password_confirmation: '123456'
