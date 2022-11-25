@@ -54,17 +54,6 @@ puts 'Creating 15 fake animals...'
 
 animal = Animal.new(
   name: "Oscar",
-  description: "Blablablabla",
-  category: "mammals",
-  age: 12,
-  price: 43,
-  address: '5 Rue Crespin du Gast, 75011 Paris',
-  user_id: user1.id
-)
-animal.save!
-
-animal = Animal.new(
-  name: "Oscar",
   description: 'The whale is the largest animal in the world',
   category: "mammals",
   age: 57,
@@ -243,4 +232,5 @@ animal = Animal.new(
 )
   file = URI.open("https://top10animal.com/wp-content/uploads/2021/07/unicorn3.jpg")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
+  animal.save!
   animal.save!
