@@ -5,7 +5,6 @@ require 'open-uri'
 
 Animal.destroy_all
 User.destroy_all
-
  user1 = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -15,7 +14,6 @@ User.destroy_all
   password_confirmation: '123456'
  )
  user1.save!
-
  user2 = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -25,7 +23,6 @@ User.destroy_all
   password_confirmation: '123456'
  )
  user2.save!
-
  user3 = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -35,7 +32,6 @@ User.destroy_all
   password_confirmation: '123456'
  )
  user3.save!
-
  user4 = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -45,7 +41,6 @@ User.destroy_all
   password_confirmation: '123456'
  )
  user4.save!
-
  user5 = User.new(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
@@ -55,7 +50,6 @@ User.destroy_all
   password_confirmation: '123456'
  )
  user5.save!
-
 puts 'Creating 15 fake animals...'
 
 animal = Animal.new(
@@ -246,7 +240,7 @@ animal = Animal.new(
   price: 220,
   address: '3 Rue Chaligny, 75012 Paris',
   user: User.all.sample
-  )
+)
   file = URI.open("https://top10animal.com/wp-content/uploads/2021/07/unicorn3.jpg")
   animal.photo.attach(io: file, filename: "#{animal.name} photo")
   animal.save!

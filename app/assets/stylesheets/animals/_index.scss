@@ -6,15 +6,12 @@
   margin-top: 1px;
   text-align: center;
 }
-
 :root {
   --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
 }
-
 body {
   background: #111 !important;
 }
-
 .cards-list {
   border-radius: 2px;
   column-gap: 40px;
@@ -24,7 +21,6 @@ body {
   margin-bottom: 30px;
   row-gap: 40px;
 }
-
 .card-image img {
   width: 2000px;
   height: 100px;
